@@ -21,7 +21,7 @@ type WeatherServiceImpl struct {
 	repo repository.WeatherRepository
 }
 
-//NewWeatherServiceImpl inject depedancies user repositiory
+//NewWeatherServiceImpl inject dependencies user repository
 func NewWeatherServiceImpl(repo repository.WeatherRepository) WeatherService {
 	return &WeatherServiceImpl{repo: repo}
 }
@@ -49,24 +49,19 @@ func (serviceImpl WeatherServiceImpl) FetchData(ctx context.Context, wg *sync.Wa
 				}
 
 				response, err := http.Get("http://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&appid=" + APIKEY)
-
 				if err != nil {
 					return
 				}
+
 				cityInfo := models.WeatherInfo{}
+
 				decoder := json.NewDecoder(response.Body)
 				err = decoder.Decode(&cityInfo)
-
-				if err != nil {
-					return
-				}
-
 				if err != nil {
 					return
 				}
 
 				rawData, err := json.Marshal(cityInfo)
-
 				if err != nil {
 					return
 				}
@@ -81,7 +76,6 @@ func (serviceImpl WeatherServiceImpl) FetchData(ctx context.Context, wg *sync.Wa
 				city.MoreInfo = rawData
 
 				err = serviceImpl.repo.FetchData(ctx, city)
-
 				if err != nil {
 					return
 				}

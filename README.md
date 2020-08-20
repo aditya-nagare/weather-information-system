@@ -2,16 +2,17 @@
 
 This Code uses **[OpenWeather API](api.openweathermap.org)** to fetch and the store weather data to a MySQL database which can be accessed by an REST API Endpoint.
 
-### REST APIs:
+### REST APIs
 
 |No. | API Endpoint | HTTP Method | Description |
 | --- | --- | --- | --- |
 |1.| `/weather` |**POST**| Fetch Data from OpenWeather API |
 |2.| `/weather/{cityName}` |**GET**| Get Data from the MySQL DB |
 
-### Steps to Run:
+### Steps to Run
 
 #### Step 1: Create a Database
+
 Paste the following Commands on the terminal:
 
 ```bash
