@@ -20,13 +20,13 @@ mysql -u root -p
 ```
 
 ```bash
-CREATE DATABASE new_database;
+CREATE DATABASE weather-information-system;
 ```
 
 #### Step 2: Import the  Database Schema
 
 ```bash
-mysql -u username -p new_database < data-dump.sql
+mysql -u username -p weather-information-system < weather-information-system.sql
 ```
 
 #### Step 3: Import the Go Modules/Dependencies
