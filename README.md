@@ -26,7 +26,7 @@ CREATE DATABASE weather-information-system;
 #### Step 2: Import the  Database Schema
 
 ```bash
-mysql -u username -p weather-information-system < weather-information-system.sql
+mysql -u root -p weather-information-system < weather-information-system.sql
 ```
 
 #### Step 3: Import the Go Modules/Dependencies
