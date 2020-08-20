@@ -1,5 +1,6 @@
 package services
 
+//Cities with name of the cities
 var Cities = []string{
 	"Mumbai",
 	"Delhi",
