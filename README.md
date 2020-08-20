@@ -6,14 +6,14 @@ This Code uses **[OpenWeather API](api.openweathermap.org)** to fetch and the st
 
 |No. | API Endpoint | HTTP Method | Description |
 | --- | --- | --- | --- |
-|1.| `/weather` |**POST**| Fetch Data from OpenWeather API |
-|2.| `/weather/{cityName}` |**GET**| Get Data from the MySQL DB |
+|1.| **`/weather`** |**POST**| Fetch Data from OpenWeather API |
+|2.| **`/weather/`*`{cityName}`*** |**GET**| Get Data from the MySQL DB |
 
 ### Steps to Run
 
-#### Step 1: Create a Database
+Paste the following Commands on your terminal:
 
-Paste the following Commands on the terminal:
+#### Step 1: Create a Database
 
 ```bash
 mysql -u root -p
